@@ -118,7 +118,7 @@ class ViewController: UIViewController {
         // UIDatePicker
         datePicker = UIDatePicker(frame: CGRect(x: searchBar.frame.maxX, y: searchBar.frame.minY, width: 100, height: 100))
         self.view.addSubview(datePicker)
-//        var date:NSDate = datePicker.date //  读取日期
+        //  读取日期
         
     }
 
