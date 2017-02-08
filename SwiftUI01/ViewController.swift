@@ -32,16 +32,18 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "常用UI"
         // lable
         self.view!.backgroundColor = UIColor.white
-        lable1 = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        lable1 = UILabel(frame: CGRect(x: 0, y: 64, width: 100, height: 100))
         lable1.backgroundColor = UIColor.yellow
         lable1.textAlignment = NSTextAlignment.left
         lable1.text = "你好lable"
         self.view.addSubview(lable1)
         
         // button
-        button = UIButton(frame: CGRect(x: 100, y: 0, width: 100, height: 100))
+        button = UIButton(frame: CGRect(x: 100, y: 64, width: 100, height: 100))
         button.backgroundColor = UIColor.red
         button.setTitle("按钮1", for: UIControlState.normal)
         button.addTarget(self, action: #selector(mybutton(button:)), for:.touchUpInside)
@@ -61,7 +63,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         self.view.addSubview(imageView)
         
         // UISlider
-        slider = UISlider(frame: CGRect(x: button.frame.maxX, y: 0, width: 100, height: 100))
+        slider = UISlider(frame: CGRect(x: button.frame.maxX, y: 64, width: 100, height: 100))
         slider.backgroundColor = UIColor(white: 0.8, alpha: 1)
         self.view.addSubview(slider)
         
@@ -162,6 +164,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     func mybutton(button:UIButton) -> Void {
         print("我是button的点击事件响应")
+        self.navigationController!.pushViewController(UITextViewViewController(), animated: true)
+        
     }
     
     func mybtn(button:UIButton) -> Void {
@@ -194,6 +198,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "你好"
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
     }
 }
 

@@ -14,6 +14,7 @@
 		E42A1A721E30BD2D008B26A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42A1A701E30BD2D008B26A0 /* LaunchScreen.storyboard */; };
 		E42A1A7D1E30BD2D008B26A0 /* SwiftUI01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A1A7C1E30BD2D008B26A0 /* SwiftUI01Tests.swift */; };
 		E42A1A881E30BD2D008B26A0 /* SwiftUI01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A1A871E30BD2D008B26A0 /* SwiftUI01UITests.swift */; };
+		E47F58EF1E4AB4D000BFEEC9 /* UITextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47F58EE1E4AB4D000BFEEC9 /* UITextViewViewController.swift */; };
 		E4C537571E48417F009E96D3 /* DingTalk20170118104010.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C537561E48417F009E96D3 /* DingTalk20170118104010.png */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		E42A1A831E30BD2D008B26A0 /* SwiftUI01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42A1A871E30BD2D008B26A0 /* SwiftUI01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI01UITests.swift; sourceTree = "<group>"; };
 		E42A1A891E30BD2D008B26A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E47F58EE1E4AB4D000BFEEC9 /* UITextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewViewController.swift; sourceTree = "<group>"; };
 		E4C537561E48417F009E96D3 /* DingTalk20170118104010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DingTalk20170118104010.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				E4C537561E48417F009E96D3 /* DingTalk20170118104010.png */,
 				E42A1A671E30BD2D008B26A0 /* AppDelegate.swift */,
 				E42A1A691E30BD2D008B26A0 /* ViewController.swift */,
+				E47F58EE1E4AB4D000BFEEC9 /* UITextViewViewController.swift */,
 				E42A1A6B1E30BD2D008B26A0 /* Main.storyboard */,
 				E42A1A6E1E30BD2D008B26A0 /* Assets.xcassets */,
 				E42A1A701E30BD2D008B26A0 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			files = (
 				E42A1A6A1E30BD2D008B26A0 /* ViewController.swift in Sources */,
 				E42A1A681E30BD2D008B26A0 /* AppDelegate.swift in Sources */,
+				E47F58EF1E4AB4D000BFEEC9 /* UITextViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
