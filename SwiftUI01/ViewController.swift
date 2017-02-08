@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
 
     var lable1:UILabel!
     var button: UIButton!
@@ -116,9 +116,45 @@ class ViewController: UIViewController {
         self.view.addSubview(searchBar)
         
         // UIDatePicker
-        datePicker = UIDatePicker(frame: CGRect(x: searchBar.frame.maxX, y: searchBar.frame.minY, width: 100, height: 100))
+        datePicker = UIDatePicker(frame: CGRect(x: searchBar.frame.maxX, y: searchBar.frame.minY, width: 150, height: 100))
         self.view.addSubview(datePicker)
-        //  读取日期
+        
+        // UIPickerView
+        pickerView = UIPickerView(frame: CGRect(x: scrollview.frame.minX, y: scrollview.frame.maxY, width: 100, height: 100))
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        self.view.addSubview(pickerView)
+        
+        // UIProgressView
+        proGressView = UIProgressView(frame: CGRect(x: pickerView.frame.maxX, y: pickerView.frame.minY, width: 100, height: 100))
+        proGressView.setProgress(0.8, animated: true)
+        proGressView.trackTintColor = UIColor.red
+        proGressView.tintColor = UIColor.brown
+        self.view.addSubview(proGressView)
+        
+        //UITextView
+        textView = UITextView(frame: CGRect(x: proGressView.frame.maxX, y: proGressView.frame.minY, width: 100, height: 100))
+        textView.backgroundColor = UIColor.blue
+        textView.isEditable = false
+        textView.font = UIFont.systemFont(ofSize: 20)
+        textView.text = "this is a textview"
+        self.view.addSubview(textView)
+        
+        //UIToolBar
+        toolBar = UIToolbar(frame: CGRect(x: pickerView.frame.minX, y: pickerView.frame.maxY, width: 100, height: 100))
+        let flexiblespace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let barbtnItemA = UIBarButtonItem(title: "A", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        let barbtnItemB = UIBarButtonItem(title: "B", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        let barbtnItemC = UIBarButtonItem(title: "C", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        toolBar.items = [flexiblespace,barbtnItemA,barbtnItemB,barbtnItemC]
+        self.view.addSubview(toolBar)
+        
+        // UIActivityIndicatorView
+        activityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: toolBar.frame.maxX, y: toolBar.frame.minY, width: 100, height: 100))
+        activityIndicatorView.activityIndicatorViewStyle = .gray
+        activityIndicatorView.startAnimating()
+        self.view.addSubview(activityIndicatorView)
+        
         
     }
 
@@ -149,5 +185,15 @@ class ViewController: UIViewController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
+    //MARK : 必须实现协议的required 方法 否则会报错
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 20
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "你好"
+    }
 }
 
