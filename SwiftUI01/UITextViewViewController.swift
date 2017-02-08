@@ -44,9 +44,10 @@ class UITextViewViewController: UIViewController {
         // 自适应高度
         textView!.autoresizingMask = .flexibleHeight
         // 设置富文本
-        var attributeString:NSMutableAttributedString = NSMutableAttributedString(string: "屋到期，押金各种被勒索！\n\n现在开始，你来改变这一切！\n《租房点评》为你而备，租房无忧！\n\n再也不用担心被欺骗，想要知道给你介绍房子的人好不好，《租房点评》告诉你！经常听到：\n 被中介骗了，押金不退，晚一天交房租，被讹了。\n\n租房普遍现象：\n网上报价不真实？经常被忽悠！（看房时报价都比网上高！）\n证件不齐全，被骗过!（其实根本不是房东啦!）\n看房前态度都很热情！\n签约之后态度骤变!\n入住后家电维修只能靠自己！\n房屋到期，押金各种被勒索！\n\n现在开始，你来改变这一切！\n《租房点评》为你而备，租房无忧！\n\n再也不用担心被欺骗，想要知道给你介绍房子的人好不好，《租房点评》告诉你！经常听到：\n 被中介骗了，押金不退，晚一天交房租，被讹了。\n\n租房普遍现象：\n网上报价不真实？经常被忽悠！（看房时报价都比网上高！）\n证件不齐全，被骗过!（其实根本不是房东啦!）\n看房前态度都很热情！\n签约之后态度骤变!\n入住后家电维修只能靠自己！\n房屋到期，押金各种被勒索！\n\n现在开始，你来改变这一切！\n《租房点评》为你而备，租房无忧！\n\n再也不用担心被欺骗，想要知道给你介绍房子的人好不好，《租房点评》告诉你！")
-        
-        
+        let attributeString:NSMutableAttributedString = NSMutableAttributedString(string: "屋到期，押金各种被勒索！\n\n现在开始，你来改变这一切！\n《租房点评》为你而备，租房无忧！\n\n再也不用担心被欺骗，想要知道给你介绍房子的人好不好，《租房点评》告诉你！经常听到：\n 被中介骗了，押金不退，晚一天交房租，被讹了。\n\n租房普遍现象：\n网上报价不真实？经常被忽悠！（看房时报价都比网上高！）\n证件不齐全，被骗过!（其实根本不是房东啦!）\n看房前态度都很热情！\n签约之后态度骤变!\n入住后家电维修只能靠自己！\n房屋到期，押金各种被勒索！\n\n现在开始，你来改变这一切！\n《租房点评》为你而备，租房无忧！\n\n再也不用担心被欺骗，想要知道给你介绍房子的人好不好，《租房点评》告诉你！经常听到：\n 被中介骗了，押金不退，晚一天交房租，被讹了。\n\n租房普遍现象：\n网上报价不真实？经常被忽悠！（看房时报价都比网上高！）\n证件不齐全，被骗过!（其实根本不是房东啦!）\n看房前态度都很热情！\n签约之后态度骤变!\n入住后家电维修只能靠自己！\n房屋到期，押金各种被勒索！\n\n现在开始，你来改变这一切！\n《租房点评》为你而备，租房无忧！\n\n再也不用担心被欺骗，想要知道给你介绍房子的人好不好，《租房点评》告诉你！")
+        attributeString.addAttribute(NSBackgroundColorAttributeName, value: UIColor.orange, range: NSRange(location: 0, length: 5))
+        attributeString.addAttribute(NSFontAttributeName, value:UIFont(name: "HelveticaNeue-Bold", size: 26)!, range: NSRange(location: 0, length: 5))
+        textView!.attributedText = attributeString
 
     }
    

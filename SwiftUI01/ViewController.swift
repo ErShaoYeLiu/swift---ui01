@@ -170,6 +170,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     func mybtn(button:UIButton) -> Void {
         print("点击得了另外一个")
+        self.navigationController!.pushViewController(UISegmentedControlViewController(), animated: true)
     }
 
     // 开始请求
